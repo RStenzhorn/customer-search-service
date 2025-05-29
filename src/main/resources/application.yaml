@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: "customer-search-service"
+  datasource:
+    url: jdbc:postgresql://vpn.rjst.de:5432/customer_search
+    username: postgres
+    password: 6DBXDMf8zVcxnJrSJMDLPoua4mGahfkEx6FeRfI4
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate.search.backend.hosts: vpn.rjst.de
+      hibernate.search.backend.protocol: http
+      hibernate.search.backend.username: "test"
+      hibernate.search.backend.password: "test"
+      hibernate.search.backend.layout.strategy: de.rjst.css.database.elastic.CustomIndexStrategy
+      hibernate.search.indexing.plan.synchronization.strategy: sync
+      hibernate.search.backend.log.json_pretty_printing: "true"
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    open-in-view: false
+  liquibase:
+    default-schema: public
+    enabled: true
+    change-log: classpath:changelog.yaml
+    show-summary: off
+springdoc:
+  swagger-ui:
+    use-root-path: true
+management:
+  health:
+    elasticsearch:
+      enabled: false
+
+security:
+  enabled: false
+
+logging:
+  level:
+    org:
+      hibernate:
+        search:
+          elasticsearch:
+            request: trace
