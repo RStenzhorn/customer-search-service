@@ -4,7 +4,7 @@ import de.rjst.css.api.model.ElasticResponseDto;
 import de.rjst.css.api.model.SearchRequestDto;
 import de.rjst.css.api.model.SearchResponse;
 import de.rjst.css.database.CustomerEntity;
-import de.rjst.css.database.FieldNames;
+import de.rjst.css.database.FieldName;
 import de.rjst.css.database.SearchHelper;
 import de.rjst.css.logic.SearchResponseMapper;
 import java.util.List;
@@ -39,11 +39,11 @@ public class SearchController {
         final SearchPredicate searchPredicate = predicate.bool()
                                                          .minimumShouldMatchNumber(1)
                                                          .should(x -> x.terms()
-                                                                 .field(FieldNames.FIRSTNAME.name)
+                                                                 .field(FieldName.FIRSTNAME.name)
                                                                  .matchingAll(request.getFirstName())
                                                                  .boost(10.0f))
                                                          .should(x -> x.terms()
-                                                                 .field(FieldNames.LASTNAME.name)
+                                                                 .field(FieldName.LASTNAME.name)
                                                                  .matchingAll(request.getLastName())
                                                                  .boost(5.0f))
                                                          .toPredicate();

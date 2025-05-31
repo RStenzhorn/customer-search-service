@@ -1,4 +1,4 @@
-package de.rjst.css;
+package de.rjst.css.container;
 
 import java.time.Duration;
 import org.testcontainers.containers.GenericContainer;

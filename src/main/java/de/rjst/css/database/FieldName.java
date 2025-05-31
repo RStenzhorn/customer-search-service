@@ -3,7 +3,7 @@ package de.rjst.css.database;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
-public enum FieldNames {
+public enum FieldName {
 
     FIRSTNAME("firstName"),
     LASTNAME("lastName"),
