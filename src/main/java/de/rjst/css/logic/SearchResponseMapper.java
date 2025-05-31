@@ -14,7 +14,7 @@ public class SearchResponseMapper implements Function<ElasticResponseDto, Search
 
     @Override
     public SearchResponse apply(final ElasticResponseDto elasticResponseDto) {
-        var result = new SearchResponse();
+        final var result = new SearchResponse();
         result.setMatchedFields(matchedFieldMapper.apply(elasticResponseDto.getExplanation()));
         result.setEntity(elasticResponseDto.getEntity());
         result.setScore(elasticResponseDto.getScore());

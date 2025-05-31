@@ -2,7 +2,6 @@ package de.rjst.css.logic;
 
 import de.rjst.css.api.Explanation;
 import de.rjst.css.database.FieldNames;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;

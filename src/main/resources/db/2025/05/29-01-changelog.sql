@@ -8,39 +8,6 @@ CREATE TABLE customer
     last_name   VARCHAR(255),
     email       VARCHAR(255),
     phone       VARCHAR(255),
-    ip_address  VARCHAR(255)                            NOT NULL,
     customer_id VARCHAR(255)                            NOT NULL,
     PRIMARY KEY (id)
 );
-
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('John', 'Smith', 'john.smith@email.com', '+1-555-123-4567', '192.168.1.1', 'CUST001');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Maria', 'Garcia', 'maria.g@email.com', '+34-555-987-6543', '192.168.1.2', 'CUST002');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Hans', 'Mueller', 'hans.m@email.com', '+49-555-321-7890', '192.168.1.3', 'CUST003');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Sophie', 'Martin', 'sophie.m@email.com', '+33-555-456-7891', '192.168.1.4', 'CUST004');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Luigi', 'Romano', 'luigi.r@email.com', '+39-555-789-1234', '192.168.1.5', 'CUST005');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Emma', 'Wilson', 'emma.w@email.com', '+44-555-234-5678', '192.168.1.6', 'CUST006');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Yuki', 'Tanaka', 'yuki.t@email.com', '+81-555-345-6789', '192.168.1.7', 'CUST007');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Anna', 'Kowalski', 'anna.k@email.com', '+48-555-456-7890', '192.168.1.8', 'CUST008');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Carlos', 'Silva', 'carlos.s@email.com', '+55-555-567-8901', '192.168.1.9', 'CUST009');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Erik', 'Andersson', 'erik.a@email.com', '+46-555-678-9012', '192.168.1.10', 'CUST010');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Nina', 'Ivanova', 'nina.i@email.com', '+7-555-789-0123', '192.168.1.11', 'CUST011');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Ahmed', 'Hassan', 'ahmed.h@email.com', '+20-555-890-1234', '192.168.1.12', 'CUST012');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Lisa', 'Brown', 'lisa.b@email.com', '+1-555-901-2345', '192.168.1.13', 'CUST013');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Peter', 'Schmidt', 'peter.s@email.com', '+49-555-012-3456', '192.168.1.14', 'CUST014');
-INSERT INTO customer (first_name, last_name, email, phone, ip_address, customer_id)
-VALUES ('Marie', 'Dupont', 'marie.d@email.com', '+33-555-123-4567', '192.168.1.15', 'CUST015');
-

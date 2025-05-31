@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonObject;
 import de.rjst.css.api.Explanation;
 import de.rjst.css.database.CustomerEntity;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.SneakyThrows;
 

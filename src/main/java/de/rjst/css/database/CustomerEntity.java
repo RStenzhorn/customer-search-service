@@ -13,6 +13,7 @@ import lombok.Setter;
 import org.hibernate.search.engine.backend.types.Aggregable;
 import org.hibernate.search.engine.backend.types.Projectable;
 import org.hibernate.search.engine.backend.types.Searchable;
+import org.hibernate.search.mapper.pojo.mapping.definition.annotation.GenericField;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.Indexed;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.KeywordField;
 
@@ -30,23 +31,18 @@ public class CustomerEntity {
     @Column(nullable = false)
     private Long id;
 
-    @KeywordField(searchable = Searchable.YES, aggregable = Aggregable.YES, projectable = Projectable.YES)
+    @KeywordField(searchable = Searchable.YES)
     private String firstName;
 
-    @KeywordField(searchable = Searchable.YES, aggregable = Aggregable.YES, projectable = Projectable.YES)
+    @KeywordField(searchable = Searchable.YES)
     private String lastName;
 
-    @KeywordField(searchable = Searchable.YES, aggregable = Aggregable.YES, projectable = Projectable.YES)
+    @KeywordField(searchable = Searchable.YES)
     private String email;
 
-    @KeywordField(searchable = Searchable.YES, aggregable = Aggregable.YES, projectable = Projectable.YES)
+    @KeywordField(searchable = Searchable.YES)
     private String phone;
 
-    @KeywordField(searchable = Searchable.YES, aggregable = Aggregable.YES, projectable = Projectable.YES)
-    @Column(name = "ip_address", nullable = false)
-    private String ipAddress;
-
-    @KeywordField(searchable = Searchable.YES, aggregable = Aggregable.YES, projectable = Projectable.YES)
     @Column(name = "customer_id", nullable = false)
     private String customerId;
 }
