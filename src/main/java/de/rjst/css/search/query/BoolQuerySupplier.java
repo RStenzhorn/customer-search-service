@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.search.engine.search.predicate.dsl.BooleanPredicateClausesStep;
 import org.hibernate.search.mapper.orm.session.SearchSession;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
@@ -14,6 +15,7 @@ public class BoolQuerySupplier implements Supplier<BooleanPredicateClausesStep<?
 
     private final SearchHelper sessionHelper;
 
+    @NonNull
     @Override
     public BooleanPredicateClausesStep<?> get() {
         final SearchSession session = sessionHelper.getSearchSession();

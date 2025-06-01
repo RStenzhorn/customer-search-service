@@ -20,6 +20,7 @@ public class EmailQuery implements BiConsumer<BooleanPredicateClausesStep<?>, Se
         final var email = request.getEmail();
         final var searchType = request.getSearchType();
         if (StringUtils.hasText(email)) {
+
             if (searchType == SearchType.AND) {
                 query.must(getEmailTermQuery(email));
             } else {

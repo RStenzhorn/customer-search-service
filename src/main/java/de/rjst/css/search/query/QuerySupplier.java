@@ -8,6 +8,7 @@ import java.util.function.Function;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.search.engine.search.predicate.SearchPredicate;
 import org.hibernate.search.engine.search.predicate.dsl.BooleanPredicateClausesStep;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
@@ -17,6 +18,7 @@ public class QuerySupplier implements Function<SearchRequest, SearchPredicate> {
     private final BoolQuerySupplier boolQuerySupplier;
     private final Collection<BiConsumer<BooleanPredicateClausesStep<?>, SearchRequest>> queries;
 
+    @NonNull
     @Override
     public SearchPredicate apply(final SearchRequest request) {
         final var boolQuery = boolQuerySupplier.get();

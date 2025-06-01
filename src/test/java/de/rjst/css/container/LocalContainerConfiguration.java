@@ -27,7 +27,11 @@ public class LocalContainerConfiguration {
     @Bean
     @ServiceConnection
     public PostgreSQLContainer<?> postgresContainer() {
-        return new PostgreSQLContainer<>(POSTGRESQL);
+        var container = new PostgreSQLContainer<>(POSTGRESQL);
+        container.withUsername("postgres");
+        container.withPassword("123");
+        container.setPortBindings(List.of("5432:5432"));
+        return container;
     }
 
     @Bean

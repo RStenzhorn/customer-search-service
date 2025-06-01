@@ -2,7 +2,7 @@ package de.rjst.css.search;
 
 import de.rjst.css.api.model.SearchRequest;
 import de.rjst.css.api.model.SearchResponse;
-import de.rjst.css.logic.SearchResponseMapper;
+import de.rjst.css.search.mapper.SearchResponseMapper;
 import de.rjst.css.search.query.QuerySupplier;
 import de.rjst.css.search.select.SelectSupplier;
 import java.util.List;

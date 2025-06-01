@@ -20,11 +20,10 @@ public class PhoneQuery implements BiConsumer<BooleanPredicateClausesStep<?>, Se
         final var searchType = request.getSearchType();
         if (StringUtils.hasText(phone) && phone.length() >= 5) {
             final String prefix = phone.substring(0, 5);
-            final Function<SearchPredicateFactory, PredicateFinalStep> termQuery = getPhoneQuery(prefix);
             if (searchType == SearchType.AND) {
-                query.must(termQuery);
+                query.must(getPhoneQuery(prefix));
             } else {
-                query.should(termQuery);
+                query.should(getPhoneQuery(prefix));
             }
         }
     }

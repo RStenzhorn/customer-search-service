@@ -1,4 +1,4 @@
-package de.rjst.css.logic;
+package de.rjst.css.search.mapper;
 
 import de.rjst.css.api.Explanation;
 import de.rjst.css.database.FieldName;

@@ -19,6 +19,7 @@ public class LastNameQuery implements BiConsumer<BooleanPredicateClausesStep<?>,
         final var lastName = request.getLastName();
         final var searchType = request.getSearchType();
         if (StringUtils.hasText(lastName)) {
+
             if (searchType == SearchType.AND) {
                 query.must(getLastNameQuery(lastName));
             } else {

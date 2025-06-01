@@ -19,6 +19,7 @@ public class FirstNameQuery implements BiConsumer<BooleanPredicateClausesStep<?>
         final var firstName = request.getFirstName();
         final var searchType = request.getSearchType();
         if (StringUtils.hasText(firstName)) {
+
             if (searchType == SearchType.AND) {
                 query.must(getFirstNameQuery(firstName));
             } else {
