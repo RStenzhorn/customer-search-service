@@ -1,5 +1,7 @@
 package de.rjst.css.database;
 
+import static de.rjst.css.database.elastic.CustomAnalysisConfigurer.GERMAN_CHAR_NORMALIZER;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,11 +12,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.search.engine.backend.types.Aggregable;
-import org.hibernate.search.engine.backend.types.Projectable;
 import org.hibernate.search.engine.backend.types.Searchable;
-import org.hibernate.search.mapper.pojo.mapping.definition.annotation.GenericField;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.Indexed;
+import org.hibernate.search.mapper.pojo.mapping.definition.annotation.FullTextField;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.KeywordField;
 
 @AllArgsConstructor
@@ -31,10 +31,10 @@ public class CustomerEntity {
     @Column(nullable = false)
     private Long id;
 
-    @KeywordField(searchable = Searchable.YES)
+    @KeywordField(searchable = Searchable.YES, normalizer = GERMAN_CHAR_NORMALIZER)
     private String firstName;
 
-    @KeywordField(searchable = Searchable.YES)
+    @KeywordField(searchable = Searchable.YES, normalizer = GERMAN_CHAR_NORMALIZER)
     private String lastName;
 
     @KeywordField(searchable = Searchable.YES)

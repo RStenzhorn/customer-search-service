@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:postgresql://vpn.rjst.de:5432/customer_search
     username: postgres
-    password: 6DBXDMf8zVcxnJrSJMDLPoua4mGahfkEx6FeRfI4
+    password: xxx
     driver-class-name: org.postgresql.Driver
   jpa:
     properties:
@@ -13,6 +13,7 @@ spring:
       hibernate.search.backend.username: "test"
       hibernate.search.backend.password: "test"
       hibernate.search.backend.layout.strategy: de.rjst.css.database.elastic.CustomIndexStrategy
+      hibernate.search.backend.analysis.configurer: de.rjst.css.database.elastic.CustomAnalysisConfigurer
       hibernate.search.indexing.plan.synchronization.strategy: sync
       hibernate.search.backend.log.json_pretty_printing: "true"
     hibernate:
