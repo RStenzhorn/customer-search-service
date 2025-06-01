@@ -8,9 +8,7 @@ public enum FieldName {
     FIRSTNAME("firstName"),
     LASTNAME("lastName"),
     EMAIL("email"),
-    PHONE("phone"),
-    IP_ADDRESS("ipAddress"),
-    CUSTOMER_ID("customerId");
+    PHONE("phone");
 
 
     public final String name;

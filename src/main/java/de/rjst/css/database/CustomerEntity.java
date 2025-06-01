@@ -1,6 +1,7 @@
 package de.rjst.css.database;
 
 import static de.rjst.css.database.elastic.CustomAnalysisConfigurer.GERMAN_CHAR_NORMALIZER;
+import static de.rjst.css.database.elastic.IndexName.CUSTOMER;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,14 +15,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.search.engine.backend.types.Searchable;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.Indexed;
-import org.hibernate.search.mapper.pojo.mapping.definition.annotation.FullTextField;
 import org.hibernate.search.mapper.pojo.mapping.definition.annotation.KeywordField;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Indexed(index = "customer")
+@Indexed(index = CUSTOMER)
 @Entity
 @Table(name = "customer")
 public class CustomerEntity {
@@ -43,6 +43,6 @@ public class CustomerEntity {
     @KeywordField(searchable = Searchable.YES)
     private String phone;
 
-    @Column(name = "customer_id", nullable = false)
+    @Column(nullable = false)
     private String customerId;
 }
